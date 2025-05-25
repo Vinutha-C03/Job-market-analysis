@@ -28,9 +28,9 @@ df_filtered = df if selected_city == "All" else df[df["Location"] == selected_ci
 # Extract and count skills
 skill_series = df_filtered["Skills"].dropna().str.split(",").explode()
 
-# ────────────────────────────────────────
-# 1️⃣ 📊 JOB MARKET OVERVIEW PAGE
-# ────────────────────────────────────────
+
+#  JOB MARKET OVERVIEW PAGE
+
 if page == "📊 Job Market Overview":
     st.title("📊 Job Market Overview")
 
@@ -54,9 +54,9 @@ if page == "📊 Job Market Overview":
     ax.set_title("Top 10 Companies Hiring")
     st.pyplot(fig)
 
-# ────────────────────────────────────────
-# 2️⃣ 🎯 SKILLS ANALYSIS PAGE
-# ────────────────────────────────────────
+
+#  SKILLS ANALYSIS PAGE
+
 elif page == "🎯 Skills Analysis":
     st.title("🎯 Skills Analysis")
 
@@ -101,34 +101,3 @@ elif page == "🎯 Skills Analysis":
     ax.axis("equal")  # Equal aspect ratio ensures pie is drawn as a circle.
     st.pyplot(fig)
 
-# # ────────────────────────────────────────
-# # 3️⃣ 🌍 GEOGRAPHIC ANALYSIS PAGE
-# # ────────────────────────────────────────
-# elif page == "🌍 Geographic Analysis":
-#     st.title("🌍 Geographic Job Market Analysis")
-
-#     # 🔹 Job Distribution by Location
-#     st.subheader("📍 Job Distribution by City")
-#     city_counts = df["Location"].value_counts().head(10)
-
-#     fig, ax = plt.subplots()
-#     city_counts.sort_values().plot(kind="barh", color="green", ax=ax)
-#     ax.set_xlabel("Job Count")
-#     ax.set_ylabel("City")
-#     ax.set_title("Top 10 Cities for Jobs")
-#     st.pyplot(fig)
-
-#     # 🔹 Interactive Job Map
-#     st.subheader("🗺️ Job Locations Map")
-#     map_center = [30.0444, 31.2357]  # Default center: Cairo, Egypt
-#     m = folium.Map(location=map_center, zoom_start=6)
-
-#     for _, row in df_filtered.iterrows():
-#         if pd.notna(row["Latitude"]) and pd.notna(row["Longitude"]):
-#             folium.Marker(
-#                 location=[row["Latitude"], row["Longitude"]],
-#                 popup=f"{row['Job title']} - {row['Company name']}",
-#                 icon=folium.Icon(color="blue", icon="briefcase", prefix="fa"),
-#             ).add_to(m)
-
-#     folium_static(m)
