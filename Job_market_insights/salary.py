@@ -13,19 +13,7 @@ def load_data():
 
 df = load_data()
 
-# # Sidebar Filters
-# st.sidebar.header("Filter Options")
-# job_filter = st.sidebar.selectbox("Select Job Title", ["All"] + list(df["Job Title"].unique()))
-# location_filter = st.sidebar.selectbox("Select Location", ["All"] + list(df["Location"].unique()))
 
-# Apply filters
-# filtered_df = df.copy()
-# if job_filter != "All":
-#     filtered_df = filtered_df[filtered_df["Job Title"] == job_filter]
-# if location_filter != "All":
-#     filtered_df = filtered_df[filtered_df["Location"] == location_filter]
-
-# Function to extract salary
 def extract_salary(salary_str):
     salary_str = re.sub(r'[^\d\-]', '', str(salary_str))
     salary_numbers = re.findall(r'\d+', salary_str)
