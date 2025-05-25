@@ -87,9 +87,9 @@ elif page == "Job Outlook":
         ax.set_title("Top 10 Companies Hiring")
         st.pyplot(fig)
 
-    # ────────────────────────────────────────
-    # 2️⃣ 🎯 SKILLS ANALYSIS PAGE
-    # ────────────────────────────────────────
+ 
+    #  SKILLS ANALYSIS PAGE
+ 
     elif page == "🎯 Skills Analysis":
         st.title("🎯 Skills Analysis")
 
