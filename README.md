@@ -43,3 +43,5 @@ Job Link
 	Industry
 	Sector
 
+Environment setup:
+install Beautifulsoups, streamlit, selenium web drivers
