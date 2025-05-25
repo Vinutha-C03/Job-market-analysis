@@ -3,7 +3,7 @@ Job-Market-Insights
 A data-driven Dashboard that provides insights into job market trends, in-demand skills, and salary distributions.
 📊 Streamlit Job Salary Dashboard
 
-An interactive dashboard built with **Streamlit**, **Plotly**, and **Pandas** that analyzes job listings and salary trends based on job title, location, and sector. This tool is especially useful for job seekers, analysts, and HR professionals looking to explore salary estimates and job demand trends.
+An interactive dashboard built with **Streamlit**, **Plotly**, **BeautifulSoups** and **Pandas** where webscrapping is done to get the dataset for job listings and analyzes salary trends based on job title, location, and sector. This tool is especially useful for job seekers, analysts, and HR professionals looking to explore salary estimates and job demand trends.
 
 ---
 
